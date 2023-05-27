@@ -24,12 +24,11 @@ jobs:
       - name: "准备依赖"
         run: |
           pip install selenium
-
-      # Runs a set of commands using the runners shell
-      #- name: "签到"
-      #  run: |
-      #    python 
       
       - name: "测试"
         run: |
-
+          python test.py
+      
+      #- name: "签到"
+      #  run: |
+      #    python main.py --pwd ${{ secrets.password }} --acc ${{ secrets.account }}
