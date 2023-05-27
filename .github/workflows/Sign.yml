@@ -32,4 +32,4 @@ jobs:
       
       - name: "签到"
         run: |
-          python main.py --pwd ${{ secrets.password }} --acc ${{ secrets.account }}
+          python main.py --pwd ${{ secrets.PASSWORD }} --acc ${{ secrets.ACCOUNT }}
