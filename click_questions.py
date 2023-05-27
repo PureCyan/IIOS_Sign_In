@@ -9,15 +9,15 @@ def questions(web, browser):
         browser.find_element(By.XPATH, str(xpath)).send_keys(str(q))
         
     browser.get(str(web))
-    time.sleep(round(random.uniform(0,2),1))
+    time.sleep(round(random.uniform(0,3),1))
     browser.find_element(By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div[3]").click()
-    time.sleep(round(random.uniform(0,2),1))
+    time.sleep(round(random.uniform(0,3),1))
     
     for i in range(10):
         browser.execute_script(f'document.documentElement.scrollTop={(i+1)*1000}')
 
     browser.find_element(By.XPATH, "/html/body/div/div/div[3]").click()
-    time.sleep(round(random.uniform(0,2),1))    
+    time.sleep(round(random.uniform(0,3),1))    
     
     q_1 = gettxt("/html/body/div[3]/div/div[2]/div[1]/div[2]/span[2]", browser)
     q_2 = gettxt("/html/body/div[3]/div/div[2]/div[2]/div[2]/span[2]", browser)
@@ -30,4 +30,4 @@ def questions(web, browser):
     insert(q_4, "/html/body/div[3]/div/div[2]/div[4]/div[3]/textarea", browser)
     
     browser.find_element(By.XPATH, "/html/body/div[3]/div/div[2]/button").click()
-    time.sleep(round(random.uniform(0,2),1))
+    time.sleep(round(random.uniform(0,3),1))
