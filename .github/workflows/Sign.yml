@@ -1,10 +1,9 @@
 name: Sign
 on:
   schedule: 
-  - cron: "0 19 * * *" #每天03:00执行一次(北京时间)
-  
+  - cron: "30 19 * * *" #每天03:00执行一次(北京时间)  
   workflow_dispatch:
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,10 +26,10 @@ jobs:
         run: |
           pip install selenium
       
-      - name: "测试"
-        run: |
-          python test.py
-      
-      #- name: "签到"
+      #- name: "测试"
       #  run: |
-      #    python main.py --pwd ${{ secrets.password }} --acc ${{ secrets.account }}
+      #    python test.py
+      
+      - name: "签到"
+        run: |
+          python main.py --pwd ${{ secrets.password }} --acc ${{ secrets.account }}
