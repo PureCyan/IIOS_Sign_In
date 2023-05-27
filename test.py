@@ -9,8 +9,8 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-dev-shm-usage')
 
-s = Service(r"/usr/local/bin/chromedriver")
-browser = webdriver.Chrome(s, options=chrome_options)
+s = Service(executable_path=r"/usr/local/bin/chromedriver")
+browser = webdriver.Chrome(service=s, options=chrome_options)
 
 browser.get("www.baidu.com")
 time.sleep(3)
