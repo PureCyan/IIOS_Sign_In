@@ -1,7 +1,7 @@
 name: Sign
 on:
   schedule: 
-  - cron: "30 19 * * *" #每天03:00执行一次(北京时间)  
+  - cron: "30 19 * * *" #每天约03:30执行一次(北京时间)  
   workflow_dispatch:
 
 jobs:
