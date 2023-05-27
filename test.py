@@ -12,7 +12,7 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 s = Service(executable_path=r"/usr/local/bin/chromedriver")
 browser = webdriver.Chrome(service=s, options=chrome_options)
 
-browser.get("www.baidu.com")
+browser.get("https://www.baidu.com")
 time.sleep(3)
 print(browser.title)
 browser.quit()
