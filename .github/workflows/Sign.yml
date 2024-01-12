@@ -1,0 +1,19 @@
+name: Sign
+on:
+  schedule: 
+  - cron: "30 19 * * *" #每天约03:30执行一次(北京时间)  
+  workflow_dispatch:
+
+jobs:
+  SignIn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: "准备依赖"
+        run: |
+          pip install selenium
+      
+      - name: "签到"
+        run: |
+          python main.py --pd ${{ secrets.PASSWORD }} --acc ${{ secrets.ACCOUNT }}
