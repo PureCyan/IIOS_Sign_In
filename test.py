@@ -8,9 +8,7 @@ chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-dev-shm-usage')
-
-s = Service(executable_path=r"/usr/local/bin/chromedriver")
-browser = webdriver.Chrome(service=s, options=chrome_options)
+browser = webdriver.Chrome(options=chrome_options)
 
 browser.get("https://www.baidu.com")
 time.sleep(3)
