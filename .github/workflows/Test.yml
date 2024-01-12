@@ -1,4 +1,4 @@
-name: Sign
+name: Test
 on:
   schedule: 
   - cron: "30 19 * * *" #每天约03:30执行一次(北京时间)  
